@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    input[type='range'] {
+      width: 400px;
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>숫자 관련 인풋 타입</h1>
+    <form action="#">
+      <div>
+        <label for="numIp">number</label>
+      </div>
+      <div>
+        <input id="numIp" type="number" name="aa" min="0" max="200" />
+      </div>
+      <div>
+        <label>
+          range: <input type="range" name="price" min="20" max="80" />
+          <span id="range_display">50</span>
+        </label>
+        <div>
+          <label>
+            <input type="date" name="birth_date" />
+          </label>
+        </div>
+
+        <div>
+          <!-- '2025-10-10T14:12:12' -->
+          <label>
+            <input type="datetime-local" name="birth_datetime" />
+          </label>
+        </div>
+        <div>
+          <label>
+            time:
+            <input type="week" name="birth_week" />
+          </label>
+        </div>
+      </div>
+      <input type="submit" value="확인" />
+    </form>
+
+    <script>
+      const $range = document.querySelector('input[type="range"]');
+      const $rangeDisplay = document.querySelector('#range_display');
+
+      const $date = document.querySelector(
+        'input[type="date"][name="birth_date"]'
+      );
+
+      const $dateTime = document.querySelector('input[type="datetime-local"]');
+      $dateTime.value = '2025-10-10T14:12:12';
+
+      const today = new Date();
+      today.setDate(today.getDate() + 1);
+      //   const tomorrow = new Date(today.getDate() + 1);
+      const year = today.getFullYear();
+      const mon = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      const nowDate = `${year}-${mon}-${day}`;
+
+      $date.value = nowDate;
+      $date.setAttribute(`min`, nowDate);
+      $date.setAttribute(`max`, `2025-06-05`);
+      console.log('nowDate: ', nowDate);
+
+      $range.addEventListener('mousemove', (e) => {
+        $rangeDisplay.innerText = e.target.value;
+      });
+    </script>
+  </body>
+</html>
