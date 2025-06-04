@@ -1,0 +1,7 @@
+.parent > span:first-child {
+  background: lightgreen;
+}
+
+.parent2 > p:first-child {
+  background: lightgreen;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--  -->
+    <style>
+      #signup input:checked + label {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+    <!--  -->
+  </head>
+  <body>
+    <form action="#" id="signup">
+      <div>
+        <input type="radio" name="typ" value="1" id="type_01" checked />
+        <label for="typ_01">기본형</label>
+      </div>
+      <div>
+        <input type="radio" name="typ" value="2" id="type_02" />
+        <label for="typ_02">가족형</label>
+      </div>
+      <div>
+        <input type="radio" name="typ" value="3" id="type_03" />
+        <label for="typ_03">고급형</label>
+      </div>
+    </form>
+  </body>
+</html>

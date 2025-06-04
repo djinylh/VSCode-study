@@ -1,0 +1,14 @@
+.outer > li li {
+  color: olivedrab;
+}
+
+.outer > li {
+  color: dodgerblue;
+}
+.outer > li ul {
+  text-decoration: underline;
+}
+
+.starter {
+  font-style: italic;
+}
