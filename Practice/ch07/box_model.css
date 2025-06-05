@@ -1,0 +1,22 @@
+span {
+  background-color: aquamarine;
+}
+.container {
+  background-color: #fff;
+}
+.container div {
+  background-color: bisque;
+
+  display: inline;
+}
+.container :first-child {
+  color: red;
+}
+.container :nth-child(2) {
+  color: blue;
+}
+.inline_block {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}

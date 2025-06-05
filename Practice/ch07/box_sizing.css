@@ -1,0 +1,18 @@
+.container01 {
+  background-color: antiquewhite;
+}
+.container01 > div,
+.container02 > div {
+  width: 100px;
+  height: 100px;
+  padding: 40px;
+  background-color: brown;
+  border: 1px solid #000;
+}
+.container02 > div {
+  box-sizing: border-box;
+}
+.container02 {
+  background-color: cadetblue;
+  margin-top: 2rem;
+}

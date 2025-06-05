@@ -1,0 +1,13 @@
+span {
+  background-color: aquamarine;
+}
+.container {
+  background-color: #fff;
+}
+.container div {
+  background-color: bisque;
+}
+span,
+.container div {
+  margin: 20px;
+}

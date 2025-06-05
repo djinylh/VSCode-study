@@ -1,0 +1,15 @@
+.case1 li {
+  margin-right: 2em;
+  display: inline-block;
+  background-color: darkgray;
+}
+
+.case2 li {
+  margin-right: 2em;
+  display: inline-block;
+  background-color: aqua;
+}
+
+.case2 .margin0 {
+  margin-right: 0px;
+}

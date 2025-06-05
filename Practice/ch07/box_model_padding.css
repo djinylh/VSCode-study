@@ -1,0 +1,14 @@
+span {
+  background-color: aquamarine;
+  display: inline-block;
+}
+.container {
+  background-color: #fff;
+}
+.container div {
+  background-color: bisque;
+}
+span,
+.container div {
+  padding: 20px;
+}
