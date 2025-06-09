@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      background-color: gray;
+      height: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .container > div {
+      background-color: steelblue;
+      color: #fff;
+      padding: 10px;
+      min-width: 48px;
+      min-height: 48px;
+      border: 1px solid #fff;
+    }
+    .container > :first-child {
+      background-color: crimson;
+    }
+  </style>
+  <body>
+    <h1>flex-study.html</h1>
+    <div class="container">
+      <div>이 아이템을 조절해보세요</div>
+      <div>1</div>
+      <div>2</div>
+      <div style="order: -1">3</div>
+      <div>4</div>
+    </div>
+    <span>안녕하세요.</span>
+  </body>
+</html>
