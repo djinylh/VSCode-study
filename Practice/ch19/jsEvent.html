@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 16px 32px;
+        font-size: 1.2em;
+      }
+      button,
+      input[type='text'] {
+        padding: 0.5em 1em;
+        font-size: 1.2em;
+      }
+      #click_position {
+        margin: 24px 0;
+        width: 400;
+        height: 240;
+        background-color: lightblue;
+        line-height: 240px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="my_button">이벤트를 부여하세요</button>
+    <div id="click_position">클릭 전</div>
+    <div id="view"></div>
+    <input type="text" id="my_input" />
+  </body>
+  <script>
+    const myButton = document.querySelector('#my_button');
+    function clickBtn() {
+      console.log('버튼 클릭!');
+    }
+    myButton.addEventListener('click', clickBtn);
+    myButton.addEventListener('mouseover', () => {
+      console.log('진입');
+    });
+
+    myButton.addEventListener('mouseleave', () => {
+      console.log('이탈');
+    });
+
+    //클릭전div 선택
+    const clickPosiion = document.querySelector('#click_position');
+    clickPosiion.addEventListener('click', (e) => {
+      const text = `x: ${e.clientX}, y: ${e.clientY}`;
+      e.target.textContent = text;
+    });
+    const textip = document.querySelector('#my_input');
+    textip.addEventListener('focus', (e) => {
+      e.target.setAttribute('placeHolder', '포커스된 상태');
+    });
+    textip.addEventListener('blur', (e) => {
+      e.target.setAttribute('placeHolder', '');
+    });
+    const views = document.querySelector('#view');
+    textip.addEventListener('keypress', (e) => {
+      views.textContent = e.target.value;
+    });
+  </script>
+</html>
