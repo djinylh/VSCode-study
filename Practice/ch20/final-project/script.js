@@ -125,3 +125,44 @@ currList.forEach((item, index) => {
 currList.forEach((item) => {
   item.addEventListener('mouseleave', () => (currPro.style.width = 0));
 });
+
+const contactTabs = document.querySelectorAll(
+  '#contact .contact__tab input[name="contact"]'
+);
+const contactCon = document.querySelector(
+  '#contact .contact__slides .contact__slide-con'
+);
+
+contactTabs.forEach((item, idx) => {
+  const $marginLeft = [0, '-100vw'][idx];
+
+  // let marginLeft2;
+  // if (idx === 0) {
+  //   marginLeft2 = 0;
+  // } else if (idx === 1) {
+  //   marginLeft2 = '-100vw';
+  // }
+  item.addEventListener('click', () => {
+    contactCon.style.marginLeft = $marginLeft;
+  });
+});
+
+const headerBtn = document.querySelector('.header .header__menu-btn');
+const headerNav = document.querySelector('.header .header__nav');
+
+headerBtn.addEventListener('click', (e) => {
+  headerBtn.classList.toggle('on');
+  headerNav.classList.toggle('active');
+
+  e.stopPropagation();
+});
+
+const $body = document.querySelector('body');
+$body.addEventListener('click', () => {
+  headerBtn.classList.remove('on');
+  headerNav.classList.remove('active');
+});
+// headerNav.addEventListener('mouseleave', (e) => {
+//   headerBtn.classList.remove('on');
+//   headerNav.classList.remove('active');
+// });
