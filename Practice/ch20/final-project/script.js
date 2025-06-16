@@ -154,7 +154,7 @@ headerBtn.addEventListener('click', (e) => {
   headerBtn.classList.toggle('on');
   headerNav.classList.toggle('active');
 
-  e.stopPropagation();
+  e.stopPropagation(); // 더블링 금지
 });
 
 const $body = document.querySelector('body');
